@@ -11,12 +11,15 @@ void min_max(int *arr, int size) {
     int min, max;
     min = max = arr[0];
 
+    printf("Array sequence:\n");
     for (int i = 1; i < size; i++) {
+        printf("%d ", arr[i]);
         if (arr[i] < min)
             min = arr[i];
         if (arr[i] > max)
             max = arr[i];
     }
+    printf("\n");
 
     printf("Smallest number: %d\n", min);
     printf("Largest number: %d\n", max);
@@ -43,7 +46,7 @@ void word_count(char *file_name) {
 
     fclose(file);
 
-    printf("Word count: %d\n", count);
+    printf("Word count in '%s': %d\n", file_name, count);
 }
 
 void fib_sequence(int number) {
